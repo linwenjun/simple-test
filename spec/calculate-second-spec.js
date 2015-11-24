@@ -8,13 +8,15 @@ describe('calculate_median_spec', function() {
     expect(result).toEqual(4);
   });
 
-  it('集合中第偶数个元素的个数为奇数时，计算第偶数个元素的中位数', function() {
-    var result = calculate_median(collection_a);
-    expect(result).toEqual(6);
-  });
+
 
   it('集合中第偶数个元素的个数为偶数时，计算第偶数个元素的中位数', function() {
     var result = calculate_median(collection_b);
     expect(result).toEqual(5);
+  });
+
+  it('集合中第偶数个元素的个数为奇数时，计算第偶数个元素的中位数', function() {
+    var result = calculate_median(collection_c);
+    expect(result).toEqual(6);
   });
 });
