@@ -1,12 +1,15 @@
 function median(arr) {
-  var newArr = arr.concat(arr);
+  var len = arr.length;
 
-  newArr.sort(function(a,b) {
+  arr.sort(function(a, b) {
     return a - b;
-  })
+  });
 
-  var len = newArr.length;
-  return (newArr[len/2-1] + newArr[len/2]) / 2
+  if(len % 2 == 0) {
+    return (arr[len/2-1] + arr[len/2]) / 2;
+  } else {
+    return arr[(len-1)/2];
+  }
 }
 
 function calculate_median(arr) {
