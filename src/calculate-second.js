@@ -1,10 +1,11 @@
 function median(arr) {
-  var newArr = arr.sort(function(a,b) {
+  var newArr = arr.concat(arr);
+
+  newArr.sort(function(a,b) {
     return a - b;
   })
-  newArr = newArr.concat(newArr);
-  var len = newArr.length;
 
+  var len = newArr.length;
   return (newArr[len/2-1] + newArr[len/2]) / 2
 }
 
