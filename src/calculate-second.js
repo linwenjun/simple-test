@@ -1,14 +1,14 @@
 function median(arr) {
-  var len = arr.length;
-
-  arr.sort(function(a, b) {
+  var newArr = arr.concat(); //复制一份，防止求中位数导致源数组改变
+  var len = newArr.length;
+  newArr.sort(function(a, b) {
     return a - b;
   });
 
   if(len % 2 == 0) {
-    return (arr[len/2-1] + arr[len/2]) / 2;
+    return (newArr[len/2-1] + newArr[len/2]) / 2;
   } else {
-    return arr[(len-1)/2];
+    return newArr[(len-1)/2];
   }
 }
 
